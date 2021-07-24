@@ -1,4 +1,6 @@
 import './Button.css'
+import Bold from './Bold'
+
 
 export default props => {
 
@@ -7,10 +9,9 @@ export default props => {
     classes += props.double ? 'double' : ''
     classes += props.triple ? 'triple' : ''
 
-    console.log(classes)
     return (
-        <button className={classes} onClick={e=>props.click(props.label)}>
-            {props.label}
+        <button className={classes} onClick={e => props.click(props.label)}>
+            <Bold operation={props.operation} label={props.label} />
         </button>
     )
 }
